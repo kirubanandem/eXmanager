@@ -6,11 +6,15 @@ A feature-rich Android application designed for professional expense tracking, f
 
 ## 🌟 Key Features
 
-### 💼 Business Mode (New!)
+### 💼 Business Mode (Updated!)
 * **Separate Entity Tracking:** Dedicated mode for business finances, kept completely distinct from personal budgets.
-* **Multi-Business Support:** Manage multiple business profiles under a single account.
+* **Multi-Business Support:** Manage multiple business profiles under a single account with creation-date tracking.
+* **Advanced Filtering:** Powerful search and date-range filters in business listings and transaction logs.
 * **Business Dashboards:** Real-time summary of business-specific Income, Expenses, and Net Balance.
 * **Professional Bookkeeping:** Record business transactions with custom categories and detailed notes.
+* **Business Analytics:** Dedicated visual reporting with bar charts for Income vs. Expenses and Category-wise breakdown.
+* **Smart Time-Windows:** Filter analytics by 1, 3, 6, or 12 months, or select a custom month/year range.
+* **Business Reporting:** Export professional PDF reports containing profit/loss summaries and detailed transaction histories for any selected period.
 
 ### 📶 Offline-First Synchronization
 * **Reliable Persistence:** Every entry is saved locally to SQLite first, ensuring the app works perfectly without internet.
