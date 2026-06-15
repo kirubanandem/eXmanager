@@ -6,49 +6,45 @@ A feature-rich Android application designed for professional expense tracking, f
 
 ## 🌟 Key Features
 
-### 💼 Business Mode (Updated!)
-* **Separate Entity Tracking:** Dedicated mode for business finances, kept completely distinct from personal budgets.
-* **Multi-Business Support:** Manage multiple business profiles under a single account with creation-date tracking.
-* **Advanced Filtering:** Powerful search and date-range filters in business listings and transaction logs.
-* **Business Dashboards:** Real-time summary of business-specific Income, Expenses, and Net Balance.
-* **Professional Bookkeeping:** Record business transactions with custom categories and detailed notes.
-* **Business Analytics:** Dedicated visual reporting with bar charts for Income vs. Expenses and Category-wise breakdown.
-* **Smart Time-Windows:** Filter analytics by 1, 3, 6, or 12 months, or select a custom month/year range.
-* **Business Reporting:** Export professional PDF reports containing profit/loss summaries and detailed transaction histories for any selected period.
+### 💼 Business Mode (Pro Enhancements!)
+* **Business Health Monitoring:** Real-time **Asset Measurement (Net)** calculation: `[Total Cash] + [Current Asset Value] - [Outstanding Loan Debt]`.
+* **Equity & Investor Tracking:** Professional partner management. Track **Equity Share (%)** instead of interest for investors, treated as capital inflow rather than debt.
+* **Asset Portfolio:** Dedicated module to track business-owned investments and physical assets. Automatically treats acquisition as expense and returns/payouts as income.
+* **Entity Status Control:** Manage your business lifecycle by toggling status between **Active** and **Closed**. Closed businesses are archived with a distinct visual state.
+* **Integrated Financials:** Seamlessly link specific Loans, Investors, and Assets to individual business profiles for segregated bookkeeping.
+* **Virtual Transaction Logic:** Loans and Assets are automatically injected into the business dashboard summary as virtual income/expense entries for a true cash-flow picture.
+* **Advanced Filtering:** Range-based filters and instant search to audit years of transactions in seconds.
+* **Business Analytics:** Specialized charts (MPAndroidChart) visualizing P&L and category-wise capital allocation.
 
-### 📶 Offline-First Synchronization
-* **Reliable Persistence:** Every entry is saved locally to SQLite first, ensuring the app works perfectly without internet.
-* **Automatic Cloud Sync:** Firebase background persistence automatically pushes local changes to the cloud as soon as a connection is detected.
-* **Conflict Resolution:** Maintains data integrity across multiple devices using unique synchronized identifiers.
+### 💰 Comprehensive Financial Suite
+* **Loans & Debt Tracker:** Full lifecycle management for Loans, Debts, EMIs, and Lending. Features automated repayment schedules and revised plans based on current balances.
+* **Account Hierarchy:** Organize finances using **Parent Source Accounts** (e.g., HDFC Bank) and linked **Payment Channels** (e.g., UPI, Debit Card). Balances consolidate automatically at the parent level.
+* **Income Planner:** Distributed income tracking. Plan your monthly fixed inflows and monitor remaining balances across custom periods.
+* **Transfers & ATM Logs:** Track movement between accounts (ATM withdrawals, bank transfers) with double-entry correction to ensure account balances stay perfect.
+* **Insurance Manager:** Centralized vault for insurance policies with status tracking.
+* **Billing Cycle Support:** Configure statement and due days for credit cards to automate billing period calculations.
 
-### 🔐 Security & Access
-* **Multi-Factor Login:** Support for Username/Password and Direct Email login.
-* **Biometric Security:** Fingerprint and Face Unlock integration for enhanced privacy.
-* **Session Management:** Secure logout with "Switch User" capabilities directly from the lock screen.
+### 📋 Master Data Management
+* **Centralized Categories:** Standardize your expense tagging across the entire app.
+* **Investor Master List:** Manage a global list of partners and shareholders. Quickly view which businesses an investor is currently active in.
+* **Channel Management:** Configure your payment instruments (Wallets, Cards, Apps) and link them to their physical money sources.
 
-### 💰 Financial Management
-* **Expense Tracking:** Full CRUD operations for daily expenses with categories and payment methods.
-* **Smart Input (OCR):** Scan receipts using Google ML Kit to automatically extract transaction amounts.
-* **Income Planner:** Manage multiple income sources with distributed value calculation over custom periods.
-* **ATM / Cash Transfers:** Track money movement between bank accounts and physical cash.
-* **Loans & Debt Tracker:** Dedicated module for managing loans, debts, EMIs, and lending to others.
-* **Repayment Schedules:** Automatically generate EMI plans and export them as professional PDFs.
+### 📊 Professional Analytics & Reporting
+* **Range-Based Totals:** Instant dashboard updates for custom date ranges, showing weekly and monthly spending velocity.
+* **Detailed Period Reports:** Generate on-the-fly source-wise summaries showing every inflow and outflow for a selected period.
+* **Budgeting Engine:** Set monthly targets per category. View "Budget vs Actual" reports with visual "Over-budget" alerts.
+* **PDF Export System:** Professional-grade PDF generation for Account Balances, Financial Records, and Budget reports. Includes built-in sharing via WhatsApp, Email, etc.
 
-### 📊 Advanced Analytics
-* **Budgeting System:** Set monthly budgets per category with real-time cloud synchronization.
-* **Visual Insights:** Bar charts and Pie charts for category breakdowns and payment method analysis.
-* **Month-on-Month Comparison:** Compare spending trends across different months.
-* **Budget vs Actual:** Dynamic reporting showing remaining balance or over-budget alerts.
-
-### 📄 Professional Reporting
-* **PDF Export:** Generate detailed reports for dashboard records, analytics, and budget performance.
-* **Custom Ranges:** Filter and export data for specific dates or month ranges.
-* **Share Directly:** Integrated Android share sheet to send reports via WhatsApp, Email, or Telegram.
+### 🔐 Security & Sync
+* **Offline-First Architecture:** Full CRUD capability without internet. All data is cached in a versioned SQLite database (v23).
+* **Firebase Realtime Sync:** High-speed cloud synchronization with data isolation per user (`auth.uid`).
+* **Biometric Protection:** Secure your sensitive financial data with Fingerprint or Face Unlock.
+* **OCR Receipt Scanning:** Extract amounts from physical receipts using Google ML Kit's on-device text recognition.
 
 ### 🎨 Personalization & UI
-* **Dynamic Themes:** 5 beautiful built-in themes (Blue, Green, Purple, Pink, and Midnight Dark).
-* **High-Contrast Support:** Specialized dark mode logic to ensure legibility on all device types.
-* **Adaptive UI:** Fully responsive design using Material Design 3 components.
+* **Global Navigation Drawer:** Unified sidebar for seamless jumping between Personal, Business, and Financial modules.
+* **Dynamic Theme Engine:** 5 premium Material 3 themes (Blue, Green, Purple, Pink, and Midnight Dark).
+* **Accessibility:** High-contrast support and localized currency formatting.
 
 ---
 
@@ -59,22 +55,21 @@ A feature-rich Android application designed for professional expense tracking, f
 |<img src="screenshots/login_theme.png" width="200" />|<img src="screenshots/main_dashboard.png" width="200" />|<img src="screenshots/analytics_charts.png" width="200" />|
 |*Theme Selection at Login*|*Main Dashboard*|*Financial Charts*|
 
-|Budget Reporting|Income Planner|App Store|
+|Business Mode|Income Planner|Budget Report|
 |:-:|:-:|:-:|
-|<img src="screenshots/budget_report.png" width="200" />|<img src="screenshots/income_planner.png" width="200" />|<img src="screenshots/app_store.png" width="200" />|
-|*Budget vs Actual*|*Distributed Income*|*Utility Ecosystem*|
+|<img src="screenshots/business_dashboard.png" width="200" />|<img src="screenshots/income_planner.png" width="200" />|<img src="screenshots/budget_report.png" width="200" />|
+|*Net Asset Measurement*|*Distributed Income*|*Budget vs Actual*|
 
 ---
 
 ## 🛠️ Technical Stack
 
-* **Language:** Java / XML
+* **Language:** Java / XML (Android SDK)
 * **Backend:** Firebase Authentication & Realtime Database
-* **Offline Cache:** SQLite (Synced with Cloud via Firebase Persistence)
+* **Local Database:** SQLite with automated migrations (Version 23)
 * **ML Features:** Google ML Kit (Text Recognition/OCR)
-* **UI Framework:** Material Design 3 (M3)
-* **Charts:** MPAndroidChart
-* **Image Processing:** Cloudinary (Profile Storage) & Yalantis UCrop
+* **UI Framework:** Material Design 3 (M3) with Custom View Binding
+* **Charts:** MPAndroidChart (Bar, Pie, Line)
 * **Document Engine:** Android PdfDocument API
 
 ---
@@ -93,10 +88,10 @@ A feature-rich Android application designed for professional expense tracking, f
    * Enable **Email/Password** Auth and **Realtime Database**.
 
 3. **Database Rules:**
-   Apply the rules found in `firebase_database_rules.json` to your Firebase Console.
+   Apply the rules found in `firebase_database_rules.json` to your Firebase Console to enable investor and business logic validation.
 
 4. **Build:**
-   Open in Android Studio and sync Gradle. Ensure you are using JDK 17+.
+   Open in Android Studio and sync Gradle. Minimum SDK: 26, Recommended SDK: 34.
 
 ---
 
